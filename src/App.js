@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import React from 'react';
+import AudioTranscript from './components/AudioTranscript';
 import './App.css';
 
 function App() {
+  const audioSrc = './assets/sampleAudio.mp3'; // Replace with the path to your audio file
+  const vttSrc = 'path/to/your/captions/file.vtt'; // Replace with the path to your VTT file
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Audio Transcript</h1>
+      <AudioTranscript audioSrc={audioSrc}  />
     </div>
   );
 }
